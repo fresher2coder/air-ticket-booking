@@ -1,0 +1,46 @@
+extends layout 
+
+block content-head 
+  title Welcome to Air Ticket
+  
+block content-body 
+  section.hero
+    h1 Fly Anywhere, Anytime!
+
+  section.search-section
+    .search-form
+      h2 Book Your Flight
+      form(action="/search_flight" method="post")
+        select(name="from" required)
+          option(value="" disabled selected) From
+          each airport in airports
+            option(value=airport.iata_code) #{airport.airport_name} (#{airport.iata_code})
+        
+        select(name="to" required)
+          option(value="" disabled selected) To
+          each airport in airports
+            option(value=airport.iata_code) #{airport.airport_name} (#{airport.iata_code})
+
+        select(name="passengers" required)
+          option(value="" disabled selected) Passengers
+          option(value="1") 1 Passenger
+          option(value="2") 2 Passengers
+          option(value="3") 3 Passengers
+          option(value="4") 4+ Passengers
+
+        input(type="date" name="date" required)
+        button(type="submit") Search Flights
+
+  section.features
+    .feature
+      img(src="./assets/img/easy_booking.jpg" alt="Easy Booking")
+      h3 Easy Booking
+      p Book your flight in just a few clicks.
+    .feature
+      img(src="./assets/img/best_price.jpg" alt="Best Prices")
+      h3 Best Prices
+      p Get the best deals and offers for your flights.
+    .feature
+      img(src="./assets/img/support.jpg" alt="24/7 Support")
+      h3 24/7 Support
+      p We are here to help you anytime, anywhere.

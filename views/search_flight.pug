@@ -1,0 +1,27 @@
+extends layout 
+
+block content-head 
+    title Flight Search Results
+
+block content-body 
+  #main-content
+    
+
+    if flights.length > 0
+      section.result-section
+        h2 Available Flights
+
+        each flight in flights
+          .result-card
+            h3= flight.flightName
+            p From: #{flight.from}
+            p To: #{flight.to}
+            p Price: $#{flight.price}
+            button Book Now
+    else
+      section.no-results
+        h2 No Flights Found
+        p Sorry, no flights match your search for #{from} to #{to}.
+
+
+    

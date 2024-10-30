@@ -1,0 +1,92 @@
+extends userLayout 
+
+block content-head 
+    title Flight Booking Dashboard
+  
+block content-body 
+  .main-content
+    .landing
+      h1 Welcome back, #{user.first_name}!
+
+      .quick-actions
+        .action-card View Upcoming Flights
+        .action-card Recent Bookings
+        .action-card Special Offers
+        .action-card Travel Insurance Options
+        .action-card View Frequent Flyer Points
+
+      .promo-banner
+        h2 Check out our latest offers!
+        .promo-cards
+          .promo-card
+            h3 20% Off Flights
+            p Book your flight now and get 20% off on your next booking!
+            button.promo-btn Learn More
+          .promo-card
+            h3 Free Baggage
+            p Enjoy free checked baggage on all international flights!
+            button.promo-btn Learn More
+          .promo-card
+            h3 Last Minute Deals
+            p Find amazing last-minute flight deals and save big!
+            button.promo-btn Learn More
+          .promo-card
+            h3 Refer a Friend
+            p Refer a friend and both get discounts on your next flight!
+            button.promo-btn Learn More
+
+    .user-tips
+      h2 Travel Tips
+      ul
+        li Arrive at the airport at least 2 hours before your flight.
+        li Check the weather at your destination before packing.
+        li Keep your travel documents handy for quick access.
+        li Consider using online check-in for a smoother experience.
+
+    .news-section
+      h2 Latest Travel News
+      p Stay informed about the latest travel news, including new routes, airline partnerships, and health advisories. 
+        a(href="#") Read more...
+
+    .faq-section
+      h2 Frequently Asked Questions
+      .accordion
+        .accordion-item
+          .accordion-header
+            span What is the baggage policy?
+            button.accordion-icon + 
+          .accordion-content
+            p Each passenger is allowed one carry-on bag and one personal item. Check with your airline for specific restrictions.
+        .accordion-item
+          .accordion-header
+            span How do I change my flight?
+            button.accordion-icon + 
+          .accordion-content
+            p You can change your flight by logging into your account and going to 'My Bookings'. Select the flight you want to change and follow the instructions.
+        .accordion-item
+          .accordion-header
+            span What should I do if my flight is delayed?
+            button.accordion-icon + 
+          .accordion-content
+            p If your flight is delayed, check your email for updates from your airline, and you can also monitor the flight status on our website.
+        .accordion-item
+          .accordion-header
+            span How can I contact customer support?
+            button.accordion-icon + 
+          .accordion-content
+            p You can reach our customer support via email at support@flightbooking.com or call us at 1-800-555-1234.
+        .accordion-item
+          .accordion-header
+            span What should I do if I lost my boarding pass?
+            button.accordion-icon + 
+          .accordion-content
+            p If you lost your boarding pass, contact your airline immediately. They can issue a new one, usually at the check-in counter.
+
+    .feedback-section
+      p We value your feedback! 
+      button.feedback-btn Give Feedback
+
+    include userFooter 
+  
+
+  
