@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 // Connect to MongoDB
 mongoose
   .connect(
-    "mongodb+srv://sendmail2dk:Y9RSjpFUntsyxH7E@cluster0.7br9d.mongodb.net/air-ticket-db?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://sendmail2dk:aZSMCZLbxWukg1DR@cluster0.7br9d.mongodb.net/air-ticket-booking-db?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("Failed to connect to MongoDB", err));
