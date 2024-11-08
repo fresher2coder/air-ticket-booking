@@ -22,7 +22,7 @@ router.post('/search_flight', async (req, res) => {
         //console.log(flights)    
         res.render('flightDetails', { flights });
     } catch (error) {
-        const response = await axios.get(`https://air-ticket-booking-three.vercel.app/data/flights`, {
+        const response = await axios.get(`https://air-ticket-booking-nu.vercel.app/data/flights`, {
             params: {
                 flight_status: "scheduled"                      
             }                
